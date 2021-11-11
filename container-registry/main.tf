@@ -17,7 +17,7 @@ resource "ibm_cr_retention_policy" "cr_retention_policy" {
 }
 
 resource "ibm_iam_user_policy" "policy" {
-    ibm_id = "xxx"        
+    ibm_id = var.user_email       
     roles  = ["Manager"]
     resources {
         service              = "container-registry"            
